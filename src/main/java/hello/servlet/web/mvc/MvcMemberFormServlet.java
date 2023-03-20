@@ -5,7 +5,7 @@ import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
 
 import java.io.IOException;
-
+//컨트롤러
 @WebServlet(name = "MvcMemberFormServlet", value = "/servlet-mvc/members/new-form")
 public class MvcMemberFormServlet extends HttpServlet {
     @Override

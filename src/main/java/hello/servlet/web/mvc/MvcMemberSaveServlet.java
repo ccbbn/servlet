@@ -8,6 +8,7 @@ import jakarta.servlet.annotation.*;
 
 import java.io.IOException;
 
+//컨트롤러
 @WebServlet(name = "MvcMemberSaveServlet", value = "/servlet-mvc/members/save")
 public class MvcMemberSaveServlet extends HttpServlet {
     MemberRepository memberRepository = MemberRepository.getInstance();

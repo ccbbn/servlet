@@ -9,7 +9,7 @@ import jakarta.servlet.annotation.*;
 
 import java.io.IOException;
 import java.util.List;
-
+//컨트롤러
 @WebServlet(name = "MvcMemberListServlet", value = "/servlet-mvc/members")
 public class MvcMemberListServlet extends HttpServlet {
     private MemberRepository memberRepository = MemberRepository.getInstance();
@@ -21,7 +21,7 @@ public class MvcMemberListServlet extends HttpServlet {
 
         List<Member> members = memberRepository.findAll();
 
-        request.setAttribute("members", members);
+        request.setAttribute("members", members); // 모델
 
 
         String viewPath = "/WEB-INF/views/members.jsp";

@@ -1,4 +1,5 @@
 <%--/* 이파일은 jsp다 선언 */--%>
+<%--jsp시작점--%>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
