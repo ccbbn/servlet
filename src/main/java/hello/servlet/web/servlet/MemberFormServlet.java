@@ -14,9 +14,11 @@ public class MemberFormServlet extends HttpServlet {
             throws ServletException, IOException {
         //HTML 폼을 응답할 것
 
+        //헤더 선언
         response.setContentType("text/html");
         response.setCharacterEncoding("utf-8");
 
+        // 바디 선언
         PrintWriter w = response.getWriter();
         w.println("<!DOCTYPE html>\n" +
                 "<html lang=\"en\">\n" +
