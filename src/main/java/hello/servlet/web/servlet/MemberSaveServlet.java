@@ -52,7 +52,7 @@ public class MemberSaveServlet extends HttpServlet {
     // 서블릿 안에 직접 동적 html 생성
     private void responseHtml(HttpServletResponse response, Member member) throws IOException {
         // 헤더 정보
-        response.setContentType("application/html");
+        response.setContentType("text/html");
         response.setCharacterEncoding("utf-8");
         // 바디 입력
         PrintWriter w =response.getWriter();
