@@ -7,7 +7,7 @@ import jakarta.servlet.annotation.*;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet(name = "ReponseServlet", value = "/response-html")
+@WebServlet(name = "ResponseServlet", value = "/response-html")
 public class ResponseHtmlServlet extends HttpServlet {
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response)

@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Map;
 
-@WebServlet(name = "memberSaveServlet", value = "/servlet/members/save")
+@WebServlet(name = "MemberSaveServlet", value = "/servlet/members/save")
 public class MemberSaveServlet extends HttpServlet {
 
     private ObjectMapper objectMapper = new ObjectMapper();
