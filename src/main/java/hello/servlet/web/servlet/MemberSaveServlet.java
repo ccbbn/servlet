@@ -32,7 +32,7 @@ public class MemberSaveServlet extends HttpServlet {
 
         // 클라로 보낼 http 제작
         //1 제이슨 방식
-        respondJson(response, member);
+//        respondJson(response, member);
         //2 http 방식
         responseHtml(response, member);
 

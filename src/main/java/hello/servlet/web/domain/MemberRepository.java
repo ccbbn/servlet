@@ -40,6 +40,15 @@ public class MemberRepository {
 
 
 
+    public void init() {
+        save(Member.builder().age(20).username("현덕1").build());
+        save(Member.builder().age(30).username("현덕2").build());
+        save(Member.builder().age(40).username("현덕3").build());
+
+    }
+
+
+
 
 
 
