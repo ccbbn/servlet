@@ -1,23 +1,20 @@
-package hello.servlet.web.mvc;
+package hello.servlet.web.frontcontroller.v1;
 
 import hello.servlet.web.domain.Member;
 import hello.servlet.web.domain.MemberRepository;
-import jakarta.servlet.*;
-import jakarta.servlet.http.*;
-import jakarta.servlet.annotation.*;
+import jakarta.servlet.RequestDispatcher;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 
-//컨트롤러
-@WebServlet(name = "MvcMemberSaveServlet", value = "/servlet-mvc/members/save")
-public class MvcMemberSaveServlet extends HttpServlet {
-    MemberRepository memberRepository = MemberRepository.getInstance();
+public class MemberSaveControllerV1 implements ControllerV1{
 
+    private MemberRepository memberRepository = MemberRepository.getInstance();
 
     @Override
-    protected void service(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-
+    public void process(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String username = request.getParameter("username");
         int age = Integer.parseInt(request.getParameter("age"));
 
@@ -34,11 +31,6 @@ public class MvcMemberSaveServlet extends HttpServlet {
         String viewPath = "/WEB-INF/views/save";
         RequestDispatcher dispatcher = request.getRequestDispatcher(viewPath);
         dispatcher.forward(request, response);
-
-
-
-
-
 
     }
 }

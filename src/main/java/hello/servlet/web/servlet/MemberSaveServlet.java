@@ -23,9 +23,12 @@ public class MemberSaveServlet extends HttpServlet {
             throws ServletException, IOException {
 
 
+        // 가져온다
         String username = request.getParameter("username");
         int age= Integer.parseInt(request.getParameter("age"));
 
+
+        // 저장한다
         Member member = Member.builder().username(username).age(age).build();  // new Member(username, age) 랑 같은데 빌더는 매개변수 순서 상관 없이 입력가능
 
         memberRepository.save(member);
