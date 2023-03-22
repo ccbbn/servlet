@@ -50,7 +50,7 @@ public class FrontControllerServletV3 extends HttpServlet {
 
         // 일치하는 컨트롤을 호출하면서 해당하는 컨트롤의 뷰객체를 반환
         // v2 모델 :MyView view = controller.process(request, response);
-        // v3 모델 : 레퀘스트랑 리스폰스를 map으로 대체, MyView -> ModelView
+        // v3 모델 : 레퀘스트랑 리스폰스를 map으로 대체, MyView -> ModelView, 서블릿에 대한 종속성을 제거하기 위해
 
         //클라가 보낸 정보
         Map<String, String> paramMap = createParamMap(request);
